@@ -1,16 +1,16 @@
 # 🎓 Gestão de Alunos e Professores - Sistema para Escola de Idiomas
 
-Este projeto é uma aplicação web completa para **gestão de alunos, professores e agendamentos de aulas de idiomas**, com autenticação segura, geração de relatórios e testes automatizados. A solução é totalmente containerizada com **Docker** e utiliza tecnologias modernas no frontend e backend.
+Este projeto é uma aplicação web completa para **gestão de alunos, professores e agendamentos de aulas de idiomas**, com autenticação segura, geração de requisição e testes unitários. A solução é totalmente containerizada com **Docker** e utiliza tecnologias modernas no frontend e backend.
 
 ---
 
 ## 🚀 Funcionalidades
 
 - 👤 **Cadastro de Alunos**: Adição, edição e visualização de alunos.
-- 👨‍🏫 **Cadastro de Professores**: Gerenciamento de professores da instituição.
+- 👨‍🏫 **Cadastro de Professores**: Gerenciamento de professores.
 - 📅 **Agendamento de Aulas**: Vinculação de alunos e professores com horários definidos.
 - 🔐 **Autenticação via JWT**: Login seguro com tokens.
-- 🧾 **Relatórios em PDF**: Geração e download de relatórios de agendamentos.
+- 🧾 **Relatórios em PDF**: Geração e download de requisição de agendamentos.
 - 🧪 **Testes Automatizados**:
   - Testes unitários com PHPUnit e Xdebug.
   - Testes de interface com Robot Framework.
@@ -56,7 +56,6 @@ Este projeto é uma aplicação web completa para **gestão de alunos, professor
 ```plaintext
 ├── backend
 ├── frontend
-├── robot
 ├── docker-compose.yml
 ```
 
