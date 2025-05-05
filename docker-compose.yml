@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  backend:
+    platform: linux/amd64
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    volumes:
+      - ./backend:/var/www/html/app
+    ports:
+      - "8000:8000"
+      - "8080:8080"
+    depends_on:
+      - postgresql
+    networks:
+      - app-network
+    environment:
+      - PHP_FPM_POOL=www-data
+
+  frontend:
+    platform: linux/amd64
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    environment:
+      - HOST=0.0.0.0
+
+  postgresql:
+    platform: linux/amd64
+    image: postgres:15
+    container_name: postgresql
+    environment:
+      POSTGRES_DB: avaliacao
+      POSTGRES_USER: heideric
+      POSTGRES_PASSWORD: heideric
+      POSTGRES_MULTIPLE_DATABASES: "avaliacao"
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+volumes:
+  pgdata:
+
+networks:
+  app-network:
+    driver: bridge

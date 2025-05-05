@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.9.2 on linux)" generated="2025-04-27T22:22:36.994646" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/app/tests/robot/login.robot">
+<test id="s1-t1" name="Login com credenciais válidas" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-27T22:22:37.089724" level="INFO">Creating Session using : alias=backend, url=http://backend:8000/api/login, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>backend</arg>
+<arg>${BACKEND_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-27T22:22:37.089267" elapsed="0.000780"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-27T22:22:37.090755" level="INFO">${data} = {'email': 'admin@email.com', 'password': '123456'}</msg>
+<var>${data}</var>
+<arg>email=admin@email.com</arg>
+<arg>password=123456</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.090334" elapsed="0.000455"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-27T22:22:37.222145" level="INFO">POST Request : url=http://backend:8000/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '50', 'Content-Type': 'application/json'} 
+ body=b'{"email": "admin@email.com", "password": "123456"}' 
+ </msg>
+<msg time="2025-04-27T22:22:37.222339" level="INFO">POST Response : url=http://backend:8000/api/login 
+ status=200, reason=OK 
+ headers={'Host': 'backend:8000', 'Date': 'Sun, 27 Apr 2025 22:22:37 GMT', 'Connection': 'close', 'X-Powered-By': 'PHP/8.2.28', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400', 'X-DEBUGKIT-ID': '30253a3c-716b-4336-814e-a5b508a29999'} 
+ body={"error":"E-mail ou senha incorretos."} 
+ </msg>
+<msg time="2025-04-27T22:22:37.222610" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>backend</arg>
+<arg>url=${BACKEND_URL}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.090987" elapsed="0.131785"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T22:22:37.223885" level="INFO">{'error': 'E-mail ou senha incorretos.'}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.223144" elapsed="0.000892"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:22:37.088014" elapsed="0.136271"/>
+</test>
+<test id="s1-t2" name="Login com credenciais inválidas" line="14">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-27T22:22:37.225463" level="INFO">Creating Session using : alias=backend, url=http://backend:8000/api/login, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>backend</arg>
+<arg>${BACKEND_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-27T22:22:37.225250" elapsed="0.000454"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-27T22:22:37.226145" level="INFO">${data} = {'email': 'errado@email.com', 'password': 'senhaerrada'}</msg>
+<var>${data}</var>
+<arg>email=errado@email.com</arg>
+<arg>password=senhaerrada</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.225913" elapsed="0.000265"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-27T22:22:37.354434" level="INFO">POST Request : url=http://backend:8000/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '56', 'Content-Type': 'application/json'} 
+ body=b'{"email": "errado@email.com", "password": "senhaerrada"}' 
+ </msg>
+<msg time="2025-04-27T22:22:37.354564" level="INFO">POST Response : url=http://backend:8000/api/login 
+ status=200, reason=OK 
+ headers={'Host': 'backend:8000', 'Date': 'Sun, 27 Apr 2025 22:22:37 GMT', 'Connection': 'close', 'X-Powered-By': 'PHP/8.2.28', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400', 'X-DEBUGKIT-ID': 'f1458f18-1928-49d6-b964-0ec864ca5bb3'} 
+ body={"error":"E-mail ou senha incorretos."} 
+ </msg>
+<msg time="2025-04-27T22:22:37.354758" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>backend</arg>
+<arg>url=${BACKEND_URL}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.226363" elapsed="0.128433"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T22:22:37.355959" level="INFO">Status Code: 200</msg>
+<arg>Status Code: ${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.355212" elapsed="0.000869"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T22:22:37.357018" level="INFO">Response Content: {"error":"E-mail ou senha incorretos."}</msg>
+<arg>Response Content: ${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.356371" elapsed="0.000714"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T22:22:37.357774" level="INFO">Response JSON: {'error': 'E-mail ou senha incorretos.'}</msg>
+<arg>Response JSON: ${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T22:22:37.357286" elapsed="0.000547"/>
+</kw>
+<status status="PASS" start="2025-04-27T22:22:37.224799" elapsed="0.133259"/>
+</test>
+<status status="PASS" start="2025-04-27T22:22:36.995885" elapsed="0.362778"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="2" fail="0" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
