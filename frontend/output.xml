@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.9.2 on linux)" generated="2025-04-15T02:25:45.351476" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/app/tests/robot/login.robot">
+<test id="s1-t1" name="Login com credenciais válidas" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-15T02:25:45.438531" level="INFO">Creating Session using : alias=backend, url=http://backend:8000/api/login, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>backend</arg>
+<arg>${BACKEND_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-15T02:25:45.438252" elapsed="0.000599"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-15T02:25:45.439505" level="INFO">${data} = {'email': 'admin@email.com', 'password': '123456'}</msg>
+<var>${data}</var>
+<arg>email=admin@email.com</arg>
+<arg>password=123456</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-15T02:25:45.439102" elapsed="0.000438"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-15T02:25:45.523344" level="INFO">POST Request : url=http://backend:8000/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '50', 'Content-Type': 'application/json'} 
+ body=b'{"email": "admin@email.com", "password": "123456"}' 
+ </msg>
+<msg time="2025-04-15T02:25:45.523561" level="INFO">POST Response : url=http://backend:8000/api/login 
+ status=200, reason=OK 
+ headers={'Host': 'backend:8000', 'Date': 'Tue, 15 Apr 2025 02:25:45 GMT', 'Connection': 'close', 'X-Powered-By': 'PHP/7.4.33', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400', 'Content-Type': 'application/json', 'X-DEBUGKIT-ID': '9572c336-abe2-4ca9-9d52-e91f35bb29f5'} 
+ body={"error":"E-mail ou senha incorretos."} 
+ </msg>
+<msg time="2025-04-15T02:25:45.523748" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>backend</arg>
+<arg>url=${BACKEND_URL}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-15T02:25:45.439758" elapsed="0.084028"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-04-15T02:25:45.524920" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2025-04-15T02:25:45.524087" elapsed="0.000927"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-15T02:25:45.525954" level="INFO">{'error': 'E-mail ou senha incorretos.'}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-15T02:25:45.525289" elapsed="0.000728"/>
+</kw>
+<status status="PASS" start="2025-04-15T02:25:45.437130" elapsed="0.089099"/>
+</test>
+<test id="s1-t2" name="Login com credenciais inválidas" line="15">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-15T02:25:45.527324" level="INFO">Creating Session using : alias=backend, url=http://backend:8000/api/login, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>backend</arg>
+<arg>${BACKEND_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-15T02:25:45.527107" elapsed="0.000467"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-15T02:25:45.528056" level="INFO">${data} = {'email': 'errado@email.com', 'password': 'senhaerrada'}</msg>
+<var>${data}</var>
+<arg>email=errado@email.com</arg>
+<arg>password=senhaerrada</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-15T02:25:45.527818" elapsed="0.000272"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-15T02:25:45.611143" level="INFO">POST Request : url=http://backend:8000/api/login 
+ path_url=/api/login 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '56', 'Content-Type': 'application/json'} 
+ body=b'{"email": "errado@email.com", "password": "senhaerrada"}' 
+ </msg>
+<msg time="2025-04-15T02:25:45.611268" level="INFO">POST Response : url=http://backend:8000/api/login 
+ status=200, reason=OK 
+ headers={'Host': 'backend:8000', 'Date': 'Tue, 15 Apr 2025 02:25:45 GMT', 'Connection': 'close', 'X-Powered-By': 'PHP/7.4.33', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Max-Age': '86400', 'Content-Type': 'application/json', 'X-DEBUGKIT-ID': '01985651-d1c3-4881-b1c2-7580e8ec7d34'} 
+ body={"error":"E-mail ou senha incorretos."} 
+ </msg>
+<msg time="2025-04-15T02:25:45.611438" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>backend</arg>
+<arg>url=${BACKEND_URL}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-15T02:25:45.528319" elapsed="0.083158"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2025-04-15T02:25:45.612376" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2025-04-15T02:25:45.612511" level="FAIL">200.0 != 401.0</msg>
+<arg>${response.status_code}</arg>
+<arg>401</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="FAIL" start="2025-04-15T02:25:45.611783" elapsed="0.000818">200.0 != 401.0</status>
+</kw>
+<status status="FAIL" start="2025-04-15T02:25:45.526671" elapsed="0.086194">200.0 != 401.0</status>
+</test>
+<status status="FAIL" start="2025-04-15T02:25:45.352654" elapsed="0.260997"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login" id="s1" pass="1" fail="1" skip="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

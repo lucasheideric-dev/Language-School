@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="tests/bootstrap.php"
+    colors="true"
+    verbose="true"
+    stopOnFailure="false"
+    beStrictAboutTestsThatDoNotTestAnything="false"
+    failOnRisky="true"
+    failOnWarning="true"
+    testdox="true">
+
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>tests/TestCase</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src/Application.php</directory>
+            <directory suffix=".php">src/Controller</directory>
+            <directory suffix=".php">src/Controller/Api</directory>
+            <directory suffix=".php">src/Model</directory>
+        </include>
+        <logging>
+            <log type="html" target="logs/coverage" outputDirectory="logs/coverage" />
+            <log type="text" target="logs/coverage.txt" outputFile="logs/coverage.txt" />
+        </logging>
+    </coverage>
+</phpunit>

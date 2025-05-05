@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/html/app/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/var/www/html/app/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/PagesController.php.html#13">App\Controller\PagesController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#10">App\Controller\Api\StudentsController</a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#10">App\Controller\Api\LessonsController</a></td><td class="text-right">19%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#10">App\Controller\Api\TeachersController</a></td><td class="text-right">36%</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#10">App\Controller\Api\GuardianFormsController</a></td><td class="text-right">43%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#7">App\Controller\UsersController</a></td><td class="text-right">48%</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#7">App\Controller\TeachersController</a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#7">App\Controller\StudentsController</a></td><td class="text-right">58%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#10">App\Controller\Api\UsersController</a></td><td class="text-right">69%</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#7">App\Controller\LessonsController</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#7">App\Controller\GuardianFormsController</a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Application.php.html#19">App\Application</a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#10">App\Controller\Api\LessonsController</a></td><td class="text-right">3446</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#10">App\Controller\Api\StudentsController</a></td><td class="text-right">675</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#10">App\Controller\Api\TeachersController</a></td><td class="text-right">292</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#10">App\Controller\Api\GuardianFormsController</a></td><td class="text-right">172</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#13">App\Controller\PagesController</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#10">App\Controller\Api\UsersController</a></td><td class="text-right">60</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#7">App\Controller\UsersController</a></td><td class="text-right">50</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#7">App\Controller\TeachersController</a></td><td class="text-right">24</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#7">App\Controller\StudentsController</a></td><td class="text-right">17</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#7">App\Controller\LessonsController</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#7">App\Controller\GuardianFormsController</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="Application.php.html#19">App\Application</a></td><td class="text-right">7</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#98"><abbr title="App\Controller\Api\GuardianFormsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#129"><abbr title="App\Controller\Api\GuardianFormsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#40"><abbr title="App\Controller\Api\LessonsController::today">today</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#67"><abbr title="App\Controller\Api\LessonsController::lastLessons">lastLessons</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#386"><abbr title="App\Controller\Api\LessonsController::playLesson">playLesson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#416"><abbr title="App\Controller\Api\LessonsController::finishLesson">finishLesson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#446"><abbr title="App\Controller\Api\LessonsController::cancelLesson">cancelLesson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#19"><abbr title="App\Controller\Api\StudentsController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#40"><abbr title="App\Controller\Api\StudentsController::list">list</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#90"><abbr title="App\Controller\Api\StudentsController::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#122"><abbr title="App\Controller\Api\StudentsController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#153"><abbr title="App\Controller\Api\StudentsController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#40"><abbr title="App\Controller\Api\TeachersController::list">list</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#118"><abbr title="App\Controller\Api\TeachersController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#150"><abbr title="App\Controller\Api\TeachersController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#15"><abbr title="App\Controller\PagesController::display">display</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#121"><abbr title="App\Controller\Api\LessonsController::add">add</abbr></a></td><td class="text-right">11%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#252"><abbr title="App\Controller\Api\LessonsController::edit">edit</abbr></a></td><td class="text-right">15%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#9"><abbr title="App\Controller\UsersController::login">login</abbr></a></td><td class="text-right">16%</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#41"><abbr title="App\Controller\TeachersController::edit">edit</abbr></a></td><td class="text-right">27%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#63"><abbr title="App\Controller\UsersController::edit">edit</abbr></a></td><td class="text-right">27%</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#41"><abbr title="App\Controller\StudentsController::edit">edit</abbr></a></td><td class="text-right">30%</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#58"><abbr title="App\Controller\StudentsController::delete">delete</abbr></a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#39"><abbr title="App\Controller\UsersController::view">view</abbr></a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#82"><abbr title="App\Controller\UsersController::delete">delete</abbr></a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#61"><abbr title="App\Controller\TeachersController::delete">delete</abbr></a></td><td class="text-right">37%</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#40"><abbr title="App\Controller\Api\GuardianFormsController::view">view</abbr></a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#92"><abbr title="App\Controller\Api\LessonsController::view">view</abbr></a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#61"><abbr title="App\Controller\Api\StudentsController::view">view</abbr></a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#61"><abbr title="App\Controller\Api\TeachersController::view">view</abbr></a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#63"><abbr title="App\Controller\Api\UsersController::view">view</abbr></a></td><td class="text-right">53%</td></tr>
+       <tr><td><a href="Application.php.html#21"><abbr title="App\Application::bootstrap">bootstrap</abbr></a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#29"><abbr title="App\Controller\LessonsController::add">add</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#120"><abbr title="App\Controller\Api\UsersController::edit">edit</abbr></a></td><td class="text-right">62%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#90"><abbr title="App\Controller\Api\TeachersController::add">add</abbr></a></td><td class="text-right">64%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#92"><abbr title="App\Controller\Api\UsersController::add">add</abbr></a></td><td class="text-right">64%</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#69"><abbr title="App\Controller\Api\GuardianFormsController::add">add</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#357"><abbr title="App\Controller\Api\LessonsController::delete">delete</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#151"><abbr title="App\Controller\Api\UsersController::delete">delete</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#29"><abbr title="App\Controller\GuardianFormsController::add">add</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#46"><abbr title="App\Controller\LessonsController::edit">edit</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#45"><abbr title="App\Controller\GuardianFormsController::edit">edit</abbr></a></td><td class="text-right">72%</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#20"><abbr title="App\Controller\GuardianFormsController::view">view</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#26"><abbr title="App\Controller\StudentsController::add">add</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#26"><abbr title="App\Controller\TeachersController::add">add</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#46"><abbr title="App\Controller\UsersController::add">add</abbr></a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#19"><abbr title="App\Controller\Api\GuardianFormsController::index">index</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#19"><abbr title="App\Controller\Api\LessonsController::index">index</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#19"><abbr title="App\Controller\Api\TeachersController::index">index</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#21"><abbr title="App\Controller\Api\UsersController::index">index</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#42"><abbr title="App\Controller\Api\UsersController::list">list</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#63"><abbr title="App\Controller\GuardianFormsController::delete">delete</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#65"><abbr title="App\Controller\LessonsController::delete">delete</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Controller/Api/AppController.php.html#18"><abbr title="App\Controller\Api\AppController::beforeFilter">beforeFilter</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#121"><abbr title="App\Controller\Api\LessonsController::add">add</abbr></a></td><td class="text-right">300</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#252"><abbr title="App\Controller\Api\LessonsController::edit">edit</abbr></a></td><td class="text-right">193</td></tr>
+       <tr><td><a href="Controller/PagesController.php.html#15"><abbr title="App\Controller\PagesController::display">display</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#98"><abbr title="App\Controller\Api\GuardianFormsController::edit">edit</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#129"><abbr title="App\Controller\Api\GuardianFormsController::delete">delete</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#386"><abbr title="App\Controller\Api\LessonsController::playLesson">playLesson</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#416"><abbr title="App\Controller\Api\LessonsController::finishLesson">finishLesson</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#446"><abbr title="App\Controller\Api\LessonsController::cancelLesson">cancelLesson</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#90"><abbr title="App\Controller\Api\StudentsController::add">add</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#122"><abbr title="App\Controller\Api\StudentsController::edit">edit</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#153"><abbr title="App\Controller\Api\StudentsController::delete">delete</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#118"><abbr title="App\Controller\Api\TeachersController::edit">edit</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#150"><abbr title="App\Controller\Api\TeachersController::delete">delete</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#40"><abbr title="App\Controller\Api\LessonsController::today">today</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#67"><abbr title="App\Controller\Api\LessonsController::lastLessons">lastLessons</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#19"><abbr title="App\Controller\Api\StudentsController::index">index</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#40"><abbr title="App\Controller\Api\StudentsController::list">list</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#40"><abbr title="App\Controller\Api\TeachersController::list">list</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#41"><abbr title="App\Controller\TeachersController::edit">edit</abbr></a></td><td class="text-right">10</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#63"><abbr title="App\Controller\UsersController::edit">edit</abbr></a></td><td class="text-right">10</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#9"><abbr title="App\Controller\UsersController::login">login</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#120"><abbr title="App\Controller\Api\UsersController::edit">edit</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#40"><abbr title="App\Controller\Api\GuardianFormsController::view">view</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#92"><abbr title="App\Controller\Api\LessonsController::view">view</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/StudentsController.php.html#61"><abbr title="App\Controller\Api\StudentsController::view">view</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#61"><abbr title="App\Controller\Api\TeachersController::view">view</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#63"><abbr title="App\Controller\Api\UsersController::view">view</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#357"><abbr title="App\Controller\Api\LessonsController::delete">delete</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#151"><abbr title="App\Controller\Api\UsersController::delete">delete</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#90"><abbr title="App\Controller\Api\TeachersController::add">add</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#92"><abbr title="App\Controller\Api\UsersController::add">add</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#41"><abbr title="App\Controller\StudentsController::edit">edit</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#69"><abbr title="App\Controller\Api\GuardianFormsController::add">add</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#61"><abbr title="App\Controller\TeachersController::delete">delete</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#46"><abbr title="App\Controller\UsersController::add">add</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Controller/Api/GuardianFormsController.php.html#19"><abbr title="App\Controller\Api\GuardianFormsController::index">index</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Controller/Api/LessonsController.php.html#19"><abbr title="App\Controller\Api\LessonsController::index">index</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Controller/Api/TeachersController.php.html#19"><abbr title="App\Controller\Api\TeachersController::index">index</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#21"><abbr title="App\Controller\Api\UsersController::index">index</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Controller/Api/UsersController.php.html#42"><abbr title="App\Controller\Api\UsersController::list">list</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Application.php.html#21"><abbr title="App\Application::bootstrap">bootstrap</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#29"><abbr title="App\Controller\LessonsController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#29"><abbr title="App\Controller\GuardianFormsController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#46"><abbr title="App\Controller\LessonsController::edit">edit</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#58"><abbr title="App\Controller\StudentsController::delete">delete</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/UsersController.php.html#82"><abbr title="App\Controller\UsersController::delete">delete</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#45"><abbr title="App\Controller\GuardianFormsController::edit">edit</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/StudentsController.php.html#26"><abbr title="App\Controller\StudentsController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/TeachersController.php.html#26"><abbr title="App\Controller\TeachersController::add">add</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Controller/GuardianFormsController.php.html#63"><abbr title="App\Controller\GuardianFormsController::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Controller/LessonsController.php.html#65"><abbr title="App\Controller\LessonsController::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Controller/Api/AppController.php.html#18"><abbr title="App\Controller\Api\AppController::beforeFilter">beforeFilter</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 8.2.28</a> and <a href="https://phpunit.de/">PHPUnit 9.6.22</a> at Sun Apr 27 18:40:46 -03 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([1,0,2,0,1,2,2,1,2,1,1,14], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([16,0,3,2,5,0,6,9,5,8,0,46], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[85.71428571428571,7,"<a href=\"Application.php.html#19\">App\\Application<\/a>"],[91.66666666666666,3,"<a href=\"Controller\/Api\/AppController.php.html#9\">App\\Controller\\Api\\AppController<\/a>"],[100,6,"<a href=\"Controller\/Api\/AuthController.php.html#10\">App\\Controller\\Api\\AuthController<\/a>"],[43.037974683544306,28,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#10\">App\\Controller\\Api\\GuardianFormsController<\/a>"],[19.272727272727273,80,"<a href=\"Controller\/Api\/LessonsController.php.html#10\">App\\Controller\\Api\\LessonsController<\/a>"],[16.129032258064516,33,"<a href=\"Controller\/Api\/StudentsController.php.html#10\">App\\Controller\\Api\\StudentsController<\/a>"],[36.666666666666664,32,"<a href=\"Controller\/Api\/TeachersController.php.html#10\">App\\Controller\\Api\\TeachersController<\/a>"],[69.66292134831461,32,"<a href=\"Controller\/Api\/UsersController.php.html#10\">App\\Controller\\Api\\UsersController<\/a>"],[100,4,"<a href=\"Controller\/AppController.php.html#9\">App\\Controller\\AppController<\/a>"],[100,4,"<a href=\"Controller\/ErrorController.php.html#9\">App\\Controller\\ErrorController<\/a>"],[77.14285714285715,10,"<a href=\"Controller\/GuardianFormsController.php.html#7\">App\\Controller\\GuardianFormsController<\/a>"],[75.67567567567568,10,"<a href=\"Controller\/LessonsController.php.html#7\">App\\Controller\\LessonsController<\/a>"],[0,8,"<a href=\"Controller\/PagesController.php.html#13\">App\\Controller\\PagesController<\/a>"],[58.06451612903226,10,"<a href=\"Controller\/StudentsController.php.html#7\">App\\Controller\\StudentsController<\/a>"],[55.88235294117647,12,"<a href=\"Controller\/TeachersController.php.html#7\">App\\Controller\\TeachersController<\/a>"],[48.78048780487805,16,"<a href=\"Controller\/UsersController.php.html#7\">App\\Controller\\UsersController<\/a>"],[100,0,"<a href=\"Model\/Entity\/GuardianForm.php.html#9\">App\\Model\\Entity\\GuardianForm<\/a>"],[100,0,"<a href=\"Model\/Entity\/Lesson.php.html#9\">App\\Model\\Entity\\Lesson<\/a>"],[100,0,"<a href=\"Model\/Entity\/Role.php.html#18\">App\\Model\\Entity\\Role<\/a>"],[100,0,"<a href=\"Model\/Entity\/Student.php.html#9\">App\\Model\\Entity\\Student<\/a>"],[100,0,"<a href=\"Model\/Entity\/Teacher.php.html#9\">App\\Model\\Entity\\Teacher<\/a>"],[100,2,"<a href=\"Model\/Entity\/User.php.html#8\">App\\Model\\Entity\\User<\/a>"],[100,3,"<a href=\"Model\/Table\/GuardianFormsTable.php.html#12\">App\\Model\\Table\\GuardianFormsTable<\/a>"],[100,3,"<a href=\"Model\/Table\/LessonsTable.php.html#12\">App\\Model\\Table\\LessonsTable<\/a>"],[100,2,"<a href=\"Model\/Table\/StudentsTable.php.html#13\">App\\Model\\Table\\StudentsTable<\/a>"],[100,3,"<a href=\"Model\/Table\/TeachersTable.php.html#12\">App\\Model\\Table\\TeachersTable<\/a>"],[100,2,"<a href=\"Model\/Table\/UsersTable.php.html#8\">App\\Model\\Table\\UsersTable<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[55.55555555555556,3,"<a href=\"Application.php.html#21\">App\\Application::bootstrap<\/a>"],[100,2,"<a href=\"Application.php.html#39\">App\\Application::middleware<\/a>"],[100,1,"<a href=\"Application.php.html#64\">App\\Application::services<\/a>"],[100,1,"<a href=\"Application.php.html#66\">App\\Application::bootstrapCli<\/a>"],[100,1,"<a href=\"Controller\/Api\/AppController.php.html#11\">App\\Controller\\Api\\AppController::initialize<\/a>"],[88.88888888888889,2,"<a href=\"Controller\/Api\/AppController.php.html#18\">App\\Controller\\Api\\AppController::beforeFilter<\/a>"],[100,5,"<a href=\"Controller\/Api\/AuthController.php.html#12\">App\\Controller\\Api\\AuthController::login<\/a>"],[100,1,"<a href=\"Controller\/Api\/AuthController.php.html#54\">App\\Controller\\Api\\AuthController::jsonResponse<\/a>"],[100,1,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#12\">App\\Controller\\Api\\GuardianFormsController::initialize<\/a>"],[81.81818181818183,4,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#19\">App\\Controller\\Api\\GuardianFormsController::index<\/a>"],[53.333333333333336,5,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#40\">App\\Controller\\Api\\GuardianFormsController::view<\/a>"],[66.66666666666666,5,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#69\">App\\Controller\\Api\\GuardianFormsController::add<\/a>"],[0,6,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#98\">App\\Controller\\Api\\GuardianFormsController::edit<\/a>"],[0,6,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#129\">App\\Controller\\Api\\GuardianFormsController::delete<\/a>"],[100,1,"<a href=\"Controller\/Api\/GuardianFormsController.php.html#158\">App\\Controller\\Api\\GuardianFormsController::jsonResponse<\/a>"],[100,1,"<a href=\"Controller\/Api\/LessonsController.php.html#12\">App\\Controller\\Api\\LessonsController::initialize<\/a>"],[81.81818181818183,4,"<a href=\"Controller\/Api\/LessonsController.php.html#19\">App\\Controller\\Api\\LessonsController::index<\/a>"],[0,4,"<a href=\"Controller\/Api\/LessonsController.php.html#40\">App\\Controller\\Api\\LessonsController::today<\/a>"],[0,4,"<a href=\"Controller\/Api\/LessonsController.php.html#67\">App\\Controller\\Api\\LessonsController::lastLessons<\/a>"],[53.333333333333336,5,"<a href=\"Controller\/Api\/LessonsController.php.html#92\">App\\Controller\\Api\\LessonsController::view<\/a>"],[11.11111111111111,20,"<a href=\"Controller\/Api\/LessonsController.php.html#121\">App\\Controller\\Api\\LessonsController::add<\/a>"],[15.151515151515152,17,"<a href=\"Controller\/Api\/LessonsController.php.html#252\">App\\Controller\\Api\\LessonsController::edit<\/a>"],[66.66666666666666,6,"<a href=\"Controller\/Api\/LessonsController.php.html#357\">App\\Controller\\Api\\LessonsController::delete<\/a>"],[0,6,"<a href=\"Controller\/Api\/LessonsController.php.html#386\">App\\Controller\\Api\\LessonsController::playLesson<\/a>"],[0,6,"<a href=\"Controller\/Api\/LessonsController.php.html#416\">App\\Controller\\Api\\LessonsController::finishLesson<\/a>"],[0,6,"<a href=\"Controller\/Api\/LessonsController.php.html#446\">App\\Controller\\Api\\LessonsController::cancelLesson<\/a>"],[100,1,"<a href=\"Controller\/Api\/LessonsController.php.html#476\">App\\Controller\\Api\\LessonsController::jsonResponse<\/a>"],[100,1,"<a href=\"Controller\/Api\/StudentsController.php.html#12\">App\\Controller\\Api\\StudentsController::initialize<\/a>"],[0,4,"<a href=\"Controller\/Api\/StudentsController.php.html#19\">App\\Controller\\Api\\StudentsController::index<\/a>"],[0,4,"<a href=\"Controller\/Api\/StudentsController.php.html#40\">App\\Controller\\Api\\StudentsController::list<\/a>"],[53.333333333333336,5,"<a href=\"Controller\/Api\/StudentsController.php.html#61\">App\\Controller\\Api\\StudentsController::view<\/a>"],[0,6,"<a href=\"Controller\/Api\/StudentsController.php.html#90\">App\\Controller\\Api\\StudentsController::add<\/a>"],[0,6,"<a href=\"Controller\/Api\/StudentsController.php.html#122\">App\\Controller\\Api\\StudentsController::edit<\/a>"],[0,6,"<a href=\"Controller\/Api\/StudentsController.php.html#153\">App\\Controller\\Api\\StudentsController::delete<\/a>"],[100,1,"<a href=\"Controller\/Api\/StudentsController.php.html#182\">App\\Controller\\Api\\StudentsController::jsonResponse<\/a>"],[100,1,"<a href=\"Controller\/Api\/TeachersController.php.html#12\">App\\Controller\\Api\\TeachersController::initialize<\/a>"],[81.81818181818183,4,"<a href=\"Controller\/Api\/TeachersController.php.html#19\">App\\Controller\\Api\\TeachersController::index<\/a>"],[0,4,"<a href=\"Controller\/Api\/TeachersController.php.html#40\">App\\Controller\\Api\\TeachersController::list<\/a>"],[53.333333333333336,5,"<a href=\"Controller\/Api\/TeachersController.php.html#61\">App\\Controller\\Api\\TeachersController::view<\/a>"],[64.28571428571429,5,"<a href=\"Controller\/Api\/TeachersController.php.html#90\">App\\Controller\\Api\\TeachersController::add<\/a>"],[0,6,"<a href=\"Controller\/Api\/TeachersController.php.html#118\">App\\Controller\\Api\\TeachersController::edit<\/a>"],[0,6,"<a href=\"Controller\/Api\/TeachersController.php.html#150\">App\\Controller\\Api\\TeachersController::delete<\/a>"],[100,1,"<a href=\"Controller\/Api\/TeachersController.php.html#179\">App\\Controller\\Api\\TeachersController::jsonResponse<\/a>"],[100,1,"<a href=\"Controller\/Api\/UsersController.php.html#14\">App\\Controller\\Api\\UsersController::initialize<\/a>"],[81.81818181818183,4,"<a href=\"Controller\/Api\/UsersController.php.html#21\">App\\Controller\\Api\\UsersController::index<\/a>"],[81.81818181818183,4,"<a href=\"Controller\/Api\/UsersController.php.html#42\">App\\Controller\\Api\\UsersController::list<\/a>"],[53.333333333333336,5,"<a href=\"Controller\/Api\/UsersController.php.html#63\">App\\Controller\\Api\\UsersController::view<\/a>"],[64.28571428571429,5,"<a href=\"Controller\/Api\/UsersController.php.html#92\">App\\Controller\\Api\\UsersController::add<\/a>"],[62.5,6,"<a href=\"Controller\/Api\/UsersController.php.html#120\">App\\Controller\\Api\\UsersController::edit<\/a>"],[66.66666666666666,6,"<a href=\"Controller\/Api\/UsersController.php.html#151\">App\\Controller\\Api\\UsersController::delete<\/a>"],[100,1,"<a href=\"Controller\/Api\/UsersController.php.html#180\">App\\Controller\\Api\\UsersController::jsonResponse<\/a>"],[100,1,"<a href=\"Controller\/AppController.php.html#11\">App\\Controller\\AppController::initialize<\/a>"],[100,1,"<a href=\"Controller\/AppController.php.html#34\">App\\Controller\\AppController::isAuthorized<\/a>"],[100,2,"<a href=\"Controller\/AppController.php.html#39\">App\\Controller\\AppController::beforeRender<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#11\">App\\Controller\\ErrorController::initialize<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#16\">App\\Controller\\ErrorController::beforeFilter<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#18\">App\\Controller\\ErrorController::beforeRender<\/a>"],[100,1,"<a href=\"Controller\/ErrorController.php.html#25\">App\\Controller\\ErrorController::afterFilter<\/a>"],[100,1,"<a href=\"Controller\/GuardianFormsController.php.html#10\">App\\Controller\\GuardianFormsController::index<\/a>"],[75,1,"<a href=\"Controller\/GuardianFormsController.php.html#20\">App\\Controller\\GuardianFormsController::view<\/a>"],[66.66666666666666,3,"<a href=\"Controller\/GuardianFormsController.php.html#29\">App\\Controller\\GuardianFormsController::add<\/a>"],[72.72727272727273,3,"<a href=\"Controller\/GuardianFormsController.php.html#45\">App\\Controller\\GuardianFormsController::edit<\/a>"],[83.33333333333334,2,"<a href=\"Controller\/GuardianFormsController.php.html#63\">App\\Controller\\GuardianFormsController::delete<\/a>"],[100,1,"<a href=\"Controller\/LessonsController.php.html#9\">App\\Controller\\LessonsController::index<\/a>"],[100,1,"<a href=\"Controller\/LessonsController.php.html#20\">App\\Controller\\LessonsController::view<\/a>"],[60,3,"<a href=\"Controller\/LessonsController.php.html#29\">App\\Controller\\LessonsController::add<\/a>"],[66.66666666666666,3,"<a href=\"Controller\/LessonsController.php.html#46\">App\\Controller\\LessonsController::edit<\/a>"],[83.33333333333334,2,"<a href=\"Controller\/LessonsController.php.html#65\">App\\Controller\\LessonsController::delete<\/a>"],[0,8,"<a href=\"Controller\/PagesController.php.html#15\">App\\Controller\\PagesController::display<\/a>"],[100,1,"<a href=\"Controller\/StudentsController.php.html#9\">App\\Controller\\StudentsController::index<\/a>"],[100,1,"<a href=\"Controller\/StudentsController.php.html#17\">App\\Controller\\StudentsController::view<\/a>"],[75,3,"<a href=\"Controller\/StudentsController.php.html#26\">App\\Controller\\StudentsController::add<\/a>"],[30,3,"<a href=\"Controller\/StudentsController.php.html#41\">App\\Controller\\StudentsController::edit<\/a>"],[33.33333333333333,2,"<a href=\"Controller\/StudentsController.php.html#58\">App\\Controller\\StudentsController::delete<\/a>"],[100,1,"<a href=\"Controller\/TeachersController.php.html#9\">App\\Controller\\TeachersController::index<\/a>"],[100,1,"<a href=\"Controller\/TeachersController.php.html#17\">App\\Controller\\TeachersController::view<\/a>"],[75,3,"<a href=\"Controller\/TeachersController.php.html#26\">App\\Controller\\TeachersController::add<\/a>"],[27.27272727272727,4,"<a href=\"Controller\/TeachersController.php.html#41\">App\\Controller\\TeachersController::edit<\/a>"],[37.5,3,"<a href=\"Controller\/TeachersController.php.html#61\">App\\Controller\\TeachersController::delete<\/a>"],[16.666666666666664,3,"<a href=\"Controller\/UsersController.php.html#9\">App\\Controller\\UsersController::login<\/a>"],[100,1,"<a href=\"Controller\/UsersController.php.html#23\">App\\Controller\\UsersController::logout<\/a>"],[100,1,"<a href=\"Controller\/UsersController.php.html#30\">App\\Controller\\UsersController::index<\/a>"],[33.33333333333333,1,"<a href=\"Controller\/UsersController.php.html#39\">App\\Controller\\UsersController::view<\/a>"],[77.77777777777779,4,"<a href=\"Controller\/UsersController.php.html#46\">App\\Controller\\UsersController::add<\/a>"],[27.27272727272727,4,"<a href=\"Controller\/UsersController.php.html#63\">App\\Controller\\UsersController::edit<\/a>"],[33.33333333333333,2,"<a href=\"Controller\/UsersController.php.html#82\">App\\Controller\\UsersController::delete<\/a>"],[100,2,"<a href=\"Model\/Entity\/User.php.html#14\">App\\Model\\Entity\\User::_setPassword<\/a>"],[100,1,"<a href=\"Model\/Table\/GuardianFormsTable.php.html#14\">App\\Model\\Table\\GuardianFormsTable::initialize<\/a>"],[100,1,"<a href=\"Model\/Table\/GuardianFormsTable.php.html#28\">App\\Model\\Table\\GuardianFormsTable::validationDefault<\/a>"],[100,1,"<a href=\"Model\/Table\/GuardianFormsTable.php.html#37\">App\\Model\\Table\\GuardianFormsTable::buildRules<\/a>"],[100,1,"<a href=\"Model\/Table\/LessonsTable.php.html#14\">App\\Model\\Table\\LessonsTable::initialize<\/a>"],[100,1,"<a href=\"Model\/Table\/LessonsTable.php.html#35\">App\\Model\\Table\\LessonsTable::validationDefault<\/a>"],[100,1,"<a href=\"Model\/Table\/LessonsTable.php.html#53\">App\\Model\\Table\\LessonsTable::buildRules<\/a>"],[100,1,"<a href=\"Model\/Table\/StudentsTable.php.html#15\">App\\Model\\Table\\StudentsTable::initialize<\/a>"],[100,1,"<a href=\"Model\/Table\/StudentsTable.php.html#28\">App\\Model\\Table\\StudentsTable::validationDefault<\/a>"],[100,1,"<a href=\"Model\/Table\/TeachersTable.php.html#14\">App\\Model\\Table\\TeachersTable::initialize<\/a>"],[100,1,"<a href=\"Model\/Table\/TeachersTable.php.html#29\">App\\Model\\Table\\TeachersTable::buildRules<\/a>"],[100,1,"<a href=\"Model\/Table\/TeachersTable.php.html#36\">App\\Model\\Table\\TeachersTable::validationDefault<\/a>"],[100,1,"<a href=\"Model\/Table\/UsersTable.php.html#10\">App\\Model\\Table\\UsersTable::initialize<\/a>"],[100,1,"<a href=\"Model\/Table\/UsersTable.php.html#21\">App\\Model\\Table\\UsersTable::validationDefault<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
