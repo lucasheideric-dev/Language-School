@@ -107,7 +107,7 @@ VALUES (
 | **Aula Agendada para Menor de 16 Anos**      | Tela indicando uma aula para menores         | ![Aula Agendada para Menor de 16 Anos](https://i.imgur.com/qDdytaY.png)      |
 | **Tela de Requisição**                       | Visualização de requisições feitas           | ![Tela de Requisição](https://i.imgur.com/tGXrpu7.png)                       |
 | **Arquivo Gerado**                           | Exemplo de arquivo gerado pelo sistema       | ![Arquivo Gerado](https://i.imgur.com/CJ1NIyA.png)                           |
-| **Atalhos de Busca**                         | Menu com atalhos de busca                    | ![Atalhos de Busca]([https://i.imgur.com/QRt7A8v.png](https://i.imgur.com/QRt7A8v.png))                         |
+| **Atalhos de Busca**                         | Menu com atalhos de busca                    | ![Atalhos de Busca](https://i.imgur.com/QRt7A8v.png)                         |
 | **Validação de Token JWT com Time**          | Tela mostrando validação de JWT              | ![Validação de Token JWT com Time](https://i.imgur.com/qWEP3HU.png)          |
 | **Teste de API**                             | Testes realizados na API                     | ![Teste de API](https://i.imgur.com/5eOnzoZ.png)                             |
 | **Docker e Containers**                      | Configurações do ambiente Docker             | ![Docker e Containers](https://i.imgur.com/LjXSEIZ.png)                      |
